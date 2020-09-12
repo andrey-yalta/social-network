@@ -1,0 +1,49 @@
+/*.cintent{*/
+/*    grid-area: c;*/
+/*    background-color: cornflowerblue;*/
+
+/*}*/
+.content{
+    text-align: center;
+}
+h2{
+    font-weight: bold;
+}
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+.dialog{
+    padding: 10px;
+    color: darkgreen;
+
+}
+.dialogsMessage{
+    border: 1px solid darkblue;
+    max-width: 600px;
+}
+.message_from{
+    text-align: start;
+    padding: 10px;
+}
+.message_to{
+    text-align: end;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: darkgreen;
+}
+.active{
+    color: black;
+    text-decoration: underline;
+}
+.person{
+    width: 30px;
+
+    border-radius: 25px;
+}
+.dialogsMessage_area{
+    text-align: center;
+}

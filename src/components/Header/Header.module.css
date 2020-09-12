@@ -1,0 +1,12 @@
+.img{
+    width: 100px;
+}
+.login__block{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+
+}
+.login__block a{
+    color: white;
+}

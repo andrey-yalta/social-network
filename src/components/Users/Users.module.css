@@ -1,0 +1,16 @@
+.users{
+    color: darkblue;
+    font-size: 22px;
+}
+.users__img{
+    width: 70px;
+    height: 60px;
+    border-radius: 25px;
+}
+.selected__page{
+    font-weight: bold;
+    font-size: 20px;
+}
+.login__block{
+    float: right;
+}

@@ -1,0 +1,38 @@
+.nav{
+    padding-top: 10px;
+    text-align: center;
+    grid-area: n;
+    background-color: burlywood;
+}
+.nav div{
+    padding: 5px;
+}
+.nav a{
+    color: darkgreen;
+    text-decoration: none;
+
+}
+.nav a.active{
+    color: black;
+    text-decoration: underline;
+}
+.sitebar{
+margin-top: 100px;
+    color: darkgreen;
+
+}
+.sitebar__items{
+    display: flex;
+    justify-content: center;
+}
+.sitebar__item{
+    width: 50px;
+    border: 1px solid black;
+}
+.sitebar__item img{
+    height: 30px;
+    border-radius: 10px;
+}
+.sitebar__item label{
+    color: black;
+}

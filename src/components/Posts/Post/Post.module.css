@@ -1,0 +1,13 @@
+.post{
+    margin: 30px;
+    border: 1px solid black;
+    text-align: start;
+
+}
+.post img{
+    width: 60px;
+    border-radius: 25px;
+}
+.post label{
+    color: red;
+}

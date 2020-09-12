@@ -15,13 +15,13 @@ import store from "./redux/redux-store";
 
 class App extends Component {
     componentDidMount() {
-        this.props.initializeApp();
+        // this.props.initializeApp();
     }
 
     render() {
-        if (!this.props.initialized) {
-            return <Preloader/>
-        }
+        // if (!this.props.initialized) {
+        //     return <Preloader/>
+        // }
 
         return (
                     <div className='app-wrapper'>

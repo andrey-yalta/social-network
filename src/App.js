@@ -24,16 +24,16 @@ const Settings = React.lazy(() => import("./components/Settings/Settings"));
 // const DialogsContainer = React.lazy(()=>import("./components/Dialogs/DialogsContainer"));
 
 class App extends Component {
-    catchAllUnhandledErrors = (promiseRejectionEvent)=>{
-        alert("some errors");
-    }
+    // catchAllUnhandledErrors = (promiseRejectionEvent)=>{
+    //     alert("some errors");
+    // }
     componentDidMount() {
-        this.props.initializeApp();
-        window.addEventListener("unhandledrejection",this.catchAllUnhandledErrors);
+        // this.props.initializeApp();
+        // window.addEventListener("unhandledrejection",this.catchAllUnhandledErrors);
     }
-    componentWillMount() {
-        window.removeEventListener("unhandledrejection", this.catchAllUnhandledErrors);
-    }
+    // componentWillMount() {
+    //     window.removeEventListener("unhandledrejection", this.catchAllUnhandledErrors);
+    // }
 
     render() {
         if (!this.props.initialized) {

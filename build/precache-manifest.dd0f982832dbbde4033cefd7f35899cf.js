@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "c7f89e1e385c609b3561",
+    "revision": "d0baa84c83959be8ad9c",
     "url": "/andrey-yalta/social-network/static/css/main.af479b03.chunk.css"
   },
   {
-    "revision": "c7f89e1e385c609b3561",
-    "url": "/andrey-yalta/social-network/static/js/main.c7f89e1e.chunk.js"
+    "revision": "d0baa84c83959be8ad9c",
+    "url": "/andrey-yalta/social-network/static/js/main.d0baa84c.chunk.js"
   },
   {
     "revision": "307b12dba4c6f81b1ad2",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/andrey-yalta/social-network/static/media/circles.1181204b.svg"
   },
   {
-    "revision": "f9b14d4bfa45093ab340631167ddec1e",
+    "revision": "e2c27760800dd20bc4eb28885197e208",
     "url": "/andrey-yalta/social-network/index.html"
   }
 ];

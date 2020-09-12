@@ -83,8 +83,8 @@ class App extends Component {
                                </React.Suspense>}}/>
 
 
-                    <Route  path='*'
-                           render={() => <div> 404</div>}/>
+                    {/*<Route  path='*'*/}
+                    {/*       render={() => <div> 404</div>}/>*/}
                     </Switch>
                 </div>
             </div>

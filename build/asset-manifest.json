@@ -1,7 +1,7 @@
 {
   "main.css": "/andrey-yalta/social-network/static/css/main.af479b03.chunk.css",
-  "main.js": "/andrey-yalta/social-network/static/js/main.c7f89e1e.chunk.js",
-  "main.js.map": "/andrey-yalta/social-network/static/js/main.c7f89e1e.chunk.js.map",
+  "main.js": "/andrey-yalta/social-network/static/js/main.d0baa84c.chunk.js",
+  "main.js.map": "/andrey-yalta/social-network/static/js/main.d0baa84c.chunk.js.map",
   "static/css/1.7f7b2fa4.chunk.css": "/andrey-yalta/social-network/static/css/1.7f7b2fa4.chunk.css",
   "static/js/1.307b12db.chunk.js": "/andrey-yalta/social-network/static/js/1.307b12db.chunk.js",
   "static/js/1.307b12db.chunk.js.map": "/andrey-yalta/social-network/static/js/1.307b12db.chunk.js.map",
@@ -14,10 +14,10 @@
   "runtime~main.js.map": "/andrey-yalta/social-network/static/js/runtime~main.5dc2c653.js.map",
   "static/media/user.png": "/andrey-yalta/social-network/static/media/user.83427d44.png",
   "static/media/circles.svg": "/andrey-yalta/social-network/static/media/circles.1181204b.svg",
+  "static/css/2.155d1714.chunk.css.map": "/andrey-yalta/social-network/static/css/2.155d1714.chunk.css.map",
   "static/css/1.7f7b2fa4.chunk.css.map": "/andrey-yalta/social-network/static/css/1.7f7b2fa4.chunk.css.map",
   "static/css/main.af479b03.chunk.css.map": "/andrey-yalta/social-network/static/css/main.af479b03.chunk.css.map",
-  "static/css/2.155d1714.chunk.css.map": "/andrey-yalta/social-network/static/css/2.155d1714.chunk.css.map",
   "index.html": "/andrey-yalta/social-network/index.html",
-  "precache-manifest.db5ea208cb2e9d094b22ec97858cf345.js": "/andrey-yalta/social-network/precache-manifest.db5ea208cb2e9d094b22ec97858cf345.js",
+  "precache-manifest.dd0f982832dbbde4033cefd7f35899cf.js": "/andrey-yalta/social-network/precache-manifest.dd0f982832dbbde4033cefd7f35899cf.js",
   "service-worker.js": "/andrey-yalta/social-network/service-worker.js"
 }

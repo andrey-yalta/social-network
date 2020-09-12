@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/andrey-yalta/social-network/precache-manifest.dd0f982832dbbde4033cefd7f35899cf.js"
+  "/social-network/precache-manifest.acd6afc001c424b1f247f33a6e6d9cb4.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/andrey-yalta/social-network/index.html", {
+workbox.routing.registerNavigationRoute("/social-network/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });

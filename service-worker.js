@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/andrey-yalta/social-network/precache-manifest.db5ea208cb2e9d094b22ec97858cf345.js"
+  "/andrey-yalta/social-network/precache-manifest.dd0f982832dbbde4033cefd7f35899cf.js"
 );
 
 workbox.clientsClaim();

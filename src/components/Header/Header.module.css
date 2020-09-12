@@ -1,12 +1,17 @@
-.img{
-    width: 100px;
+.header {
+    grid-area: h;
+    background-color: green;
 }
-.login__block{
+
+.header img {
+    width: 20px;
+}
+
+.loginBlock {
     float: right;
-    margin-right: 20px;
-    margin-top: 20px;
 
 }
-.login__block a{
+.loginBlock a {
     color: white;
 }
+

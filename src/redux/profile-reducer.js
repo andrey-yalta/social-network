@@ -1,98 +1,75 @@
 import {profileAPI, usersAPI} from "../api/api";
-import {stopSubmit} from "redux-form";
 
-const ADD_POST = "ADD-POST";
-const SET_USER_PROFILE = "SET_USER_PROFILE";
-const SET_STATUS = "SET_STATUS";
-const SAVE_PHOTO_SUCCESS = "SAVE_PHOTO_SUCCESS";
+const ADD_POST = 'ADD-POST';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
+const SET_STATUS = 'SET_STATUS';
+const DELETE_POST = 'DELETE_POST';
 
 let initialState = {
-    postsData: [
-        {id: 1, text: "Hello", like: 12},
-        {id: 2, text: "How are you, man?", like: 11},
-        {id: 3, text: "What interestind in your life?", like: 1},
-        {id: 4, text: "I'm glad to hear you!", like: 5}],
+    posts: [
+        {id: 1, message: 'Hi, how are you?', likesCount: 12},
+        {id: 2, message: 'It\'s my first post', likesCount: 11},
+        {id: 3, message: 'Blabla', likesCount: 11},
+        {id: 4, message: 'Dada', likesCount: 11}
+    ],
     profile: null,
-    status: "",
+    status: ""
 };
 
 const profileReducer = (state = initialState, action) => {
+
     switch (action.type) {
         case ADD_POST: {
             let newPost = {
-                id: 5, text: action.newPostText, like: 0
+                id: 5,
+                message: action.newPostText,
+                likesCount: 0
             };
-            let newState = {...state, postsData: [...state.postsData]}; //поверхностная и глубокая копия
-            newState.postsData.push(newPost);
-            newState.newPostText = "";
-            return newState
-        }
-        case SET_USER_PROFILE: {
-            return {...state, profile: action.profile};
+            return {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: ''
+            };
         }
         case SET_STATUS: {
-            return {...state, status: action.status};
+            return {
+                ...state,
+                status: action.status
+            }
         }
-        case SAVE_PHOTO_SUCCESS: {
-            return {...state, profile: {...state.profile, photos:action.photos}};
+        case SET_USER_PROFILE: {
+            return {...state, profile: action.profile}
         }
-        default: {
-            return state
-        }
-    }
-};
 
-export const addPostActionCreator = (newPostText) => {
-    return {type: "ADD-POST", newPostText}
-};
-export const setUserProfile = (profile) => {
-    return {type: "SET_USER_PROFILE", profile};
-};
-export const setStatus = (status) => {
-    return {type: "SET_STATUS", status};
-};
-export const savePhotoSuccess = (photos) => {
-    return {type: "SAVE_PHOTO_SUCCESS", photos};
-};
+        case DELETE_POST:
+            return {...state, posts: state.posts.filter(p => p.id != action.postId)}
+        default:
+            return state;
+    }
+}
+
+
+export const addPostActionCreator = (newPostText) => ({type: ADD_POST, newPostText})
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
+export const setStatus = (status) => ({type: SET_STATUS, status})
+export const deletePost = (postId) => ({type: DELETE_POST, postId})
 
 export const getUserProfile = (userId) => async (dispatch) => {
-    let response = await usersAPI.getProfile(userId)
+    const response = await usersAPI.getProfile(userId);
     dispatch(setUserProfile(response.data));
-};
+}
 
 export const getStatus = (userId) => async (dispatch) => {
-    let response = await profileAPI.getStatus(userId)
-    dispatch(setStatus(response.data))
-};
+    let response = await profileAPI.getStatus(userId);
+    dispatch(setStatus(response.data));
+}
+
 export const updateStatus = (status) => async (dispatch) => {
-    try {
-        let response = await profileAPI.updateStatus(status)
-        if (response.data.resultCode === 0) {
-            dispatch(setStatus(status))
-        }
-    } catch (error) {
-        alert("update status error" + error)
-        //ЗДЕСЬ НАДО ЗАДИСПАТЧИТЬ ОШИБКУ
-    }
-};
-export const savePhoto = (file)=> async(dispatch) =>{
-    let response = await profileAPI.savePhoto(file)
-    if (response.data.resultCode ===0){
-        dispatch(savePhotoSuccess(response.data.data.photos) )
-    }
-};
+    let response = await profileAPI.updateStatus(status);
 
-export const saveProfile = (profile)=> async(dispatch, getState) =>{
-    const userId = getState().auth.userId;
-    const response = await profileAPI.saveProfile(profile)
-    if (response.data.resultCode ===0){
-        dispatch(getUserProfile(userId) )
+    if (response.data.resultCode === 0) {
+        dispatch(setStatus(status));
     }
-    else{
-        dispatch(stopSubmit("edit-profile", {_error: response.data.messages[0]}));
-        return Promise.reject(response.data.messages[0])
-    }
-
-};
+}
 
 export default profileReducer;

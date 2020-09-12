@@ -1,9 +1,10 @@
-import circles from "../../../assets/img/circles.svg";
-import React from "react";
+import React from 'react';
+import preloader from "../../../assets/images/preloader.svg";
 
-let Preloader =(props) =>{
-   return <div>
-       <img src={circles} alt={"waiting please"}/>
-        </div>
+let Preloader = (props) => {
+    return <div  style={ { backgroundColor: 'white' } }>
+        <img src={preloader} />
+    </div>
 }
+
 export default Preloader;
